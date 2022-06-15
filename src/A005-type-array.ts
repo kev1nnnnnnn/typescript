@@ -13,6 +13,8 @@ export function concatenaStrings(...args: string[]): string {
 export function toUpperCase(...args: string[]): string[] {
     return args.map(valor => valor.toUpperCase());
 }
+
+
 const results = multiplicaArgs(2,2,2);
 const concatena = concatenaStrings('a', 'b', 'c');
 const upper = toUpperCase('c', 'd', 'e');

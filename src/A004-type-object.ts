@@ -2,7 +2,7 @@ const objetoA: {
     chaveA: string;
     chaveB: string;
     chaveC?: string;
-    [key: string]: unknown;
+    [key: string]: unknown; //or any
 } = {
     chaveA: 'Valor A',
     chaveB: 'valor B',
