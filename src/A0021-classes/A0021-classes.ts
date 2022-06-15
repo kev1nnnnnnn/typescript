@@ -1,37 +1,44 @@
 export class Empresa {
-  public readonly nome: string; // public não necessário
-  private readonly colaboradores: Colaborador[] = [];
-  protected readonly cnpj: string;
+    public readonly name: string;
+    private readonly colaboradores: Colaborador[] = [];
+    protected readonly cnpj: string;
 
-  constructor(nome: string, cnpj: string) {
-    this.nome = nome;
-    this.cnpj = cnpj;
-  }
-
-  adicionaColaborador(colaborador: Colaborador): void {
-    this.colaboradores.push(colaborador);
-  }
-
-  mostrarColaboradores(): void {
-    for (const colaborador of this.colaboradores) {
-      console.log(colaborador);
+    constructor(name: string, cnpj: string) {
+        this.name = name;
+        this.cnpj = cnpj;
     }
-  }
+
+    // metodo para add os colaboradores
+    addColaboration(colaboration: Colaborador): void {
+        this.colaboradores.push(colaboration);
+    }
+    mostrarColaborador(): void {
+        for(const colaborador of this.colaboradores) {
+            console.log(colaborador);
+        }
+    }
 }
 
 export class Colaborador {
-  constructor(
-    public readonly nome: string,
-    public readonly sobrenome: string,
-  ) {}
+    constructor(
+        public readonly name: string,
+        public readonly sobrenome: string,
+    ) {}
 }
 
-const empresa1 = new Empresa('Udemy', '11.111.111/0001-11');
-const colaborador1 = new Colaborador('Luiz', 'Otávio');
-const colaborador2 = new Colaborador('Maria', 'Miranda');
-const colaborador3 = new Colaborador('João', 'Vieira');
-empresa1.adicionaColaborador(colaborador1);
-empresa1.adicionaColaborador(colaborador2);
-empresa1.adicionaColaborador(colaborador3);
-console.log(empresa1);
-empresa1.mostrarColaboradores();
+const empresa1 = new Empresa('NBN', '92.233.871/0001-73');
+const colaboration1 = new Colaborador('Hugo', 'Jorge');
+const colaboration2 = new Colaborador('Viviane', 'Menezes');
+const colaboration3 = new Colaborador('Johnz', 'Costa');
+
+empresa1.addColaboration(colaboration1);
+empresa1.addColaboration(colaboration2);
+empresa1.addColaboration(colaboration3);
+
+empresa1.mostrarColaborador();
+
+
+
+
+
+
